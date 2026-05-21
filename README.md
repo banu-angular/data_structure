@@ -235,7 +235,8 @@ Python lists:
 ### 🔹 1. Access → O(1)
 
 ```
-arr = [10, 20, 30, 40]print(arr[2])
+arr = [10, 20, 30, 40]
+print(arr[2])
 ```
 
 👉 Direct jump to memory location
@@ -325,7 +326,8 @@ arr = [10, 20, 30]arr.insert(1, 15)
 ### 🧩 Pattern 1: Traversal
 
 ```
-for i in range(len(arr)):    print(arr[i])
+for i in range(len(arr)):
+ print(arr[i])
 ```
 
 ----------
@@ -333,7 +335,14 @@ for i in range(len(arr)):    print(arr[i])
 ### 🧩 Pattern 2: Two Pointer
 
 ```
-arr = [1, 2, 3, 4]l, r = 0, len(arr)-1while l < r:    arr[l], arr[r] = arr[r], arr[l]    l += 1    r -= 1
+arr = [1, 2, 3, 4]
+
+l, r = 0, len(arr)-1
+
+while l < r:
+    arr[l], arr[r] = arr[r], arr[l]
+    l += 1
+    r -= 1
 ```
 
 👉 Used in:
@@ -346,7 +355,13 @@ arr = [1, 2, 3, 4]l, r = 0, len(arr)-1while l < r:    arr[l], arr[r] = arr[r], a
 ### 🧩 Pattern 3: Sliding Window
 
 ```
-arr = [1,2,3,4,5]k = 3window_sum = sum(arr[:k])for i in range(k, len(arr)):    window_sum += arr[i] - arr[i-k]
+arr = [1,2,3,4,5]
+k = 3
+
+window_sum = sum(arr[:k])
+
+for i in range(k, len(arr)):
+    window_sum += arr[i] - arr[i-k]
 ```
 
 👉 Used in:
@@ -363,7 +378,9 @@ arr = [1,2,3,4,5]k = 3window_sum = sum(arr[:k])for i in range(k, len(arr)):    w
 ### 🧠 Example 1: UI Rendering
 
 ```
-<div *ngFor="let item of items">  {{ item }}</div>
+<div *ngFor="let item of items">
+  {{ item }}
+</div>
 ```
 
 👉 `items` = array  
@@ -424,7 +441,8 @@ Try these:
 Example:
 
 ```
-Input:  [0,1,0,3,12]Output: [1,3,12,0,0]
+Input:  [0,1,0,3,12]
+Output: [1,3,12,0,0]
 ```
 
 ----------
