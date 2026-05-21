@@ -86,9 +86,14 @@ An **Array** is a collection of elements stored in **continuous memory locations
 Index:   0   1   2   3  
 Value:  10  20  30  40  
 
-👉 Each element is accessed using its **index**
+ Each element is accessed using its **index**
+
+👉 Key idea:
+
+You can jump to any index instantly
 
 ---
+
 
 ## ⚡ Key Characteristics
 
@@ -98,6 +103,25 @@ Value:  10  20  30  40
 - Costly insert/delete in middle  
 
 ---
+
+## ⚡ 2. Most Important Concept: Time Complexity
+
+This is the **heart of DSA**
+
+---
+
+### 🔹 Access (Super Fast ⚡)
+
+```
+arr[2]  # 30
+```
+
+👉 Time Complexity = O(1)
+
+Means: Constant time (always fast)
+
+---
+
 
 ## 🧠 Mental Model (🔥 Most Important)
 
