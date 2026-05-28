@@ -181,7 +181,23 @@ Arrays solve this problem:
 
 -   **Fast access → O(1)**
 
-----------
+### 🎯 Purpose
+
+-   Store multiple values in one place
+-   Access elements quickly using index
+-   Perform operations like searching, sorting, filtering
+
+## 📊 Array Operations in Python
+
+| Operation | Syntax             | Time Complexity |
+|----------|------------------|----------------|
+| Access   | `arr[i]`          | O(1)           |
+| Append   | `arr.append(x)`   | O(1)           |
+| Insert   | `arr.insert(i, x)`| O(n)           |
+| Delete   | `arr.remove(x)`   | O(n)           |
+| Pop      | `arr.pop()`       | O(1)           |
+| Search   | `x in arr`        | O(n)           |
+| Length   | `len(arr)`        | O(1)           |
 
 ## 🧠 3. Mental Model (This is everything)
 
@@ -394,6 +410,108 @@ items.filter(x => x.price > 100)
 -   Loop through array
 
 ----------
+
+## ✅ Real-World Examples — Check
+
+✔ **Student Scores**
+
+```
+scores = [85, 90, 78, 92]print(max(scores))  # 92print(min(scores))  # 78
+```
+
+✅ Correct — `max()` and `min()` work as expected.
+
+----------
+
+✔ **Todo List**
+
+```
+tasks = ["eat", "code", "sleep"]tasks.append("repeat")print(tasks)
+```
+
+✅ Correct — `append()` adds to the end.
+
+----------
+
+✔ **Filtering Even Numbers**
+
+```
+nums = [1, 2, 3, 4, 5, 6]even = [x for x in nums if x % 2 == 0]print(even)
+```
+
+✅ Correct — list comprehension is perfect.
+
+----------
+
+✔ **Reversing a List**
+
+```
+arr = [1, 2, 3, 4]reversed_arr = arr[::-1]print(reversed_arr)
+```
+
+✅ Correct — slicing method works.
+
+----------
+
+## ⚠️ Common Mistakes — Check
+
+✔ **Index Out of Range**
+
+```
+arr = [1, 2]print(arr[5])  # IndexError
+```
+
+✅ Correct example — clearly shows the error.
+
+----------
+
+✔ **remove() vs pop()**
+
+```
+arr = [1, 2, 3]arr.remove(2)  # removes value 2arr.pop(1)     # removes element at index 1
+```
+
+✅ Concept is correct  
+💡 Small note: After `remove(2)`, list becomes `[1, 3]`, so `pop(1)` removes `3`.
+
+----------
+
+⚠️ **Modifying List While Iterating**
+
+```
+arr = [1, 2, 3, 4]for x in arr:    if x % 2 == 0:        arr.remove(x)
+```
+
+✅ Yes, this is **risky and correct as a warning**
+
+💡 Why risky:
+
+-   It skips elements because the list shifts during iteration
+
+Example result:
+
+```
+[1, 3]  ❌ sometimes worksbut can behave unpredictably in other cases
+```
+
+✔ Your safer version:
+
+```
+arr = [x for x in arr if x % 2 != 0]
+```
+
+✅ Correct and recommended
+
+----------
+
+## 🔍 Final Verdict
+
+Everything you wrote is:
+
+-   ✅ **Conceptually correct**
+-   ✅ **Python syntax valid**
+-   ⚠️ Only minor clarification needed for `remove()` + `pop()` order
+
 
 ## ⚠️ 9. Common Mistakes
 
